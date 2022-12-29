@@ -119,3 +119,21 @@ aws transcribe get-transcription-job --region us-east-1 --transcription-job-name
 ```bash
 aws transcribe delete-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-1-custom-vocab-list"
 ```
+
+## Running Transcription job using a python script by boto3
+
+- requirements
+  1. pip
+  2. boto3
+
+To Install boto3 the SDK Package for python using pip cmd as mentioned below
+
+```bash
+pip install boto3 --user
+```
+
+- python script requirements for Amazon Transcribe:
+  1. Speech File Format: Either .WAV or .MP4 stored in S3 bucket
+  2. Bucket Name
+  3. MP$ File Name
+  4. S3 EndPoint for our Amazon Transcribe Region: s3.amazonaws.com
