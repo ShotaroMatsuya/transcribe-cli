@@ -1,0 +1,11 @@
+{
+  "TranscriptionJobName": "cmdtestjob-1-custom-vocab-list",
+  "LanguageCode": "en-US",
+  "MediaFormat": "mp4",
+  "Settings": {
+    "VocabularyName": "custom-vocab-list-format"
+  },
+  "Media": {
+    "MediaFileUri": "https://s3.amazonaws.com/smat-transcription-input/Usage+of+S3+Buckets.mp4"
+  }
+}

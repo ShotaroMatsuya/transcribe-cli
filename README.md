@@ -69,3 +69,53 @@ aws transcribe get-transcription-job --region us-east-1 --transcription-job-name
 ```bash
 aws transcribe delete-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-3-speaker-identification"
 ```
+
+## Creating Custom Vocabulary in List Format Using CLI
+
+- Example Contents of json
+
+```json
+{
+  "LanguageCode": "en-US",
+  "Phrases": ["ess-three"],
+  "VocabularyFileUri": "https://${bucket_name}.s3.amazonaws.com/CustomVocabTableFormat-S3.txt",
+  "VocabularyName": "custom-vocab-list-format"
+}
+```
+
+_Note that if you include `Phrases` in your request, you cannot use `VocabularyFileUri`; you must choose one or the other._
+
+- Create Vocabulary Cmd Syntax:
+
+```bash
+aws transcribe create-vocabulary --region us-east-1 --cli-input-json file://custom-vocab-list-format.json
+```
+
+- List Vocabularies Syntax:
+
+```bash
+aws transcribe list-vocabularies --region us-east-1 --state-equals READY
+aws transcribe list-vocabularies --region us-east-1 --state-equals PENDING
+aws transcribe list-vocabularies --region us-east-1 --state-equals FAILED
+aws transcribe list-vocabularies --region us-east-1 --name-contains "list"
+
+```
+
+- Running Transcription job Using Custom Vocabulary in list format from CLI
+
+```bash
+aws transcribe start-transcription-job --region us-east-1 --cli-input-json file://cmdtestjob-1-custom-vocab-list.json
+aws transcribe list-transcription-jobs --region us-east-1 --status COMPLETED
+```
+
+- Get Transcription Cmd:
+
+```bash
+aws transcribe get-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-1-custom-vocab-list"
+```
+
+- Delete Transcription Job Cmd:
+
+```bash
+aws transcribe delete-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-1-custom-vocab-list"
+```
