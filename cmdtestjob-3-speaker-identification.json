@@ -1,0 +1,12 @@
+{
+  "TranscriptionJobName": "cmdtestjob-3-speaker-identification",
+  "LanguageCode": "en-US",
+  "MediaFormat": "mp3",
+  "Settings": {
+    "ShowSpeakerLabels": true,
+    "MaxSpeakerLabels": 8
+  },
+  "Media": {
+    "MediaFileUri": "https://s3.amazonaws.com/smat-transcription-input/MultiSpeaker-8Voices.mp3"
+  }
+}

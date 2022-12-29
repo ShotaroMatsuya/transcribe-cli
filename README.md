@@ -49,7 +49,7 @@ aws transcribe get-transcription-job \
 - Start Transcription Cmd:
 
 ```bash
-aws transcribe start-transcription-job --region us-east-1 --cli-input-json file://cmdtestjob-2-channel-identification.json
+aws transcribe start-transcription-job --region us-east-1 --cli-input-json file://cmdtestjob-3-speaker-identification.json
 ```
 
 - List Transcription Cmd:
@@ -61,11 +61,11 @@ aws transcribe list-transcription-jobs --region us-east-1 --status IN_PROGRESS
 - Get Transcription Cmd:
 
 ```bash
-aws transcribe get-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-2-channel-identification"
+aws transcribe get-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-3-speaker-identification"
 ```
 
 - Delete Transcription Job Cmd:
 
 ```bash
-aws transcribe delete-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-2-channel-identification"
+aws transcribe delete-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-3-speaker-identification"
 ```
