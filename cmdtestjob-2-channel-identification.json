@@ -1,0 +1,11 @@
+{
+  "TranscriptionJobName": "cmdtestjob-2-channel-identification",
+  "LanguageCode": "en-US",
+  "MediaFormat": "mp3",
+  "Settings": {
+    "ChannelIdentification": true
+  },
+  "Media": {
+    "MediaFileUri": "https://s3.amazonaws.com/smat-transcription-input/MultiChannel-2Voices.mp3"
+  }
+}

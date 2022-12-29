@@ -1,3 +1,5 @@
+# Amazon Transcribe DEMO
+
 ## Running a Transcription Job via CLI
 
 - requirements
@@ -40,4 +42,30 @@ aws transcribe list-transcription-jobs \
 aws transcribe get-transcription-job \
   --region us-east-1 \
   --transcription-job-name "cmdtestjob"
+```
+
+---
+
+- Start Transcription Cmd:
+
+```bash
+aws transcribe start-transcription-job --region us-east-1 --cli-input-json file://cmdtestjob-2-channel-identification.json
+```
+
+- List Transcription Cmd:
+
+```bash
+aws transcribe list-transcription-jobs --region us-east-1 --status IN_PROGRESS
+```
+
+- Get Transcription Cmd:
+
+```bash
+aws transcribe get-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-2-channel-identification"
+```
+
+- Delete Transcription Job Cmd:
+
+```bash
+aws transcribe delete-transcription-job --region us-east-1 --transcription-job-name "cmdtestjob-2-channel-identification"
 ```
