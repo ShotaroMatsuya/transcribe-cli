@@ -137,3 +137,13 @@ pip install boto3 --user
   2. Bucket Name
   3. MP$ File Name
   4. S3 EndPoint for our Amazon Transcribe Region: s3.amazonaws.com
+
+#### introduction to ffmpeg
+
+```bash
+# Step1: Update and upgrade Homebrew Formulae
+brew update
+brew upgrade
+# Step2: Install FFmpeg
+brew install ffmpeg
+```
