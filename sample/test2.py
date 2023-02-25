@@ -5,7 +5,7 @@ from logging import DEBUG, Formatter, StreamHandler, getLogger
 import boto3
 from botocore.exceptions import ClientError
 
-logger = getLogger("S3操作")
+logger = getLogger("S3操作+Transcribe実行")
 logger.setLevel(DEBUG)
 
 stream_handler = StreamHandler()
