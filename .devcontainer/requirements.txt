@@ -12,3 +12,4 @@ termcolor
 colorama
 
 boto3
+webvtt-py
